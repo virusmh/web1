@@ -2,29 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Click to Show Message</title>
+  <title>Click to Show Image</title>
   <style>
     body {
       background-color: black;
       color: white;
       font-family: Arial, sans-serif;
-      text-align: center;
       height: 100vh;
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
     }
+    #image {
+      display: none;
+      max-width: 80%;
+      max-height: 80%;
+    }
   </style>
 </head>
 <body>
+  <img id="image" src="téléchargement.jpg" alt="Wallpaper">
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.body.addEventListener("click", function() {
-        alert("ضياء شيكورك");
+    document.addEventListener('DOMContentLoaded', function() {
+      const image = document.getElementById('image');
+      document.addEventListener('click', function() {
+        image.style.display = (image.style.display === 'none') ? 'block' : 'none';
       });
     });
   </script>
 </body>
 </html>
+
 
